@@ -1,0 +1,30 @@
+body {
+    margin: 2%;
+    font-family: 'Lato';
+}
+
+.container {
+    width: 550px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center
+}
+
+p {
+    line-height: 1.6;
+}
+
+img#logo {
+    height: 50px;
+    padding: 1%
+}
+
+img#foto {
+    height: 150px;
+}
+
+footer {
+    margin-top: 200px
+}
