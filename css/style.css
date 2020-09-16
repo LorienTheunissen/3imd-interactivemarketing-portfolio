@@ -2,6 +2,7 @@ body {
     background-image: url(../images/pattern.png);
     text-align: center;
     font-family: Lato;
+    color: #2c3e50;
 }
 
 h1,
@@ -131,7 +132,7 @@ ul li {
 }
 
 nav ul {
-    margin: 2% 0;
+    margin: 2%;
 }
 
 #active {
@@ -161,33 +162,44 @@ i.fa, i.fab, i.far, i.fas {
     margin: 3% 3%;
 }
 
-.about__icon p {
-    text-align: left;
+.about article {
+    margin-top: 2%;
 }
 
-.icon__mobile {
-    display: inline;
+.skills__list {
+    display: grid;
+    grid-gap: 2%;
+    margin: 5% 0;
 }
 
-.icon__desktop {
-    display: none;
+.skills__list a {
+    color: #2c3e50;
+    cursor: default;
 }
 
 .work {
     display: grid;
-    grid-template-columns: repeat(1, auto);
+    grid-template-columns: repeat(1, 100%);
 }
 
-.work div {
+.work p {
+    margin-top: 2%;
+}
+
+.work__link {
+    text-transform: lowercase;
+}
+
+.work .work__image {
     background-size: cover;
     border: 1px solid #D5D5D5;
-    height: 300px;
-    background-position: top center;
+    background-position: center center;
 }
 
 .contact__links ul {
     display: grid;
-    grid-template-columns: repeat(5, 100px);
+    grid-template-columns: repeat(2, auto);
+    grid-gap: 2%
 }
 
 .contact__links {
@@ -203,18 +215,55 @@ i.fa, i.fab, i.far, i.fas {
     #contact {
         margin: 5% 3%;
     }
+
     .work {
-        grid-gap: 1%;
+        grid-gap: 2%;
+    }
+}
+
+@media (max-width: 480px) {
+    .skills__mobile {
+        grid-template-columns: repeat(2, auto);
+    }
+}
+
+@media (min-width: 480px) {
+    .skills__mobile {
+        grid-template-columns: repeat(3, auto);
+    }
+
+    .contact__links ul {
+        display: grid;
+        grid-template-columns: repeat(3, 100px);
+    }
+}
+
+@media (max-width: 678px) {
+    img.foto {
+        margin-bottom: 5%;
+        text-align: center;
+    }
+
+    .about__icon p {
+        text-align: center;
+    }
+
+    .skills__design, .skills__code, .skills__cms {
+        display: none;
+    }
+
+    .work .work__image {
+        height: 200px;
     }
 }
 
 @media (min-width: 678px) {
-    .icon__mobile {
-        display: none;
-    }
-
     .icon__desktop {
         display: inline;
+    }
+
+    .about__icon p {
+      text-align: left;
     }
 
     .about__icon {
@@ -226,16 +275,6 @@ i.fa, i.fab, i.far, i.fas {
         grid-template-columns: 20% 80%;
     }
 
-    .about__icon__right {
-        grid-template-columns: 80% 20%;
-    }
-
-    .skills__list {
-        display: grid;
-        grid-gap: 2%;
-        margin: 5% 0;
-    }
-
     .skills__design, .skills__code {
         grid-template-columns: repeat(5, 100px);
     }
@@ -244,8 +283,22 @@ i.fa, i.fab, i.far, i.fas {
         grid-template-columns: repeat(2, 100px);
     }
 
+    .skills__mobile {
+      display: none;
+    }
+
     .work {
-        grid-row-gap: 3%;
+        grid-template-columns: repeat(2, 50%);
+    }
+
+    .work .work__image {
+        height: 200px;
+    }
+}
+
+@media (max-width: 800px) {
+    .contact br {
+        display: none;
     }
 }
 
@@ -258,24 +311,23 @@ i.fa, i.fab, i.far, i.fas {
     #skills,
     #work,
     #contact {
-        width: 60%;
+        width: 80%;
         margin: 0 auto;
     }
 
-    .work {
-        grid-template-columns: repeat(2, auto);
-        grid-gap: 3%;
+    #about,
+    #work {
+        margin-bottom: 150px;
     }
-    .work div {
-        height: 200px;
+
+    .contact__links ul {
+        display: grid;
+        grid-template-columns: repeat(5, 100px);
     }
 }
 
 @media (min-width: 1024px) {
     .work {
-        grid-row-gap: 2%;
-    }
-    .work div {
-        height: 200px;
+        grid-template-columns: repeat(3, 33.33%);
     }
 }
